@@ -10,7 +10,7 @@ public:
    void salary(double weekly_salary);	// set weekly salary
 
    virtual double earnings() const override;
-   void print() const;
+   void print() const override;
 
 private:
    double _weekly_salary; 

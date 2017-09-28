@@ -35,6 +35,10 @@ int main()
 	cout << endl;
 	cout << "Why is the output below not identical to the output above ?" << endl;
 	cout << endl;
+	cout << "The pointers below are downcasted to type Employee. As such, " 
+	"the employee print function was called. Once the emplyee print function had been "
+	"marked as virtual, the print function was dynamically bound to the type of"
+	" employee rather than the employee base class."<< endl;
 
 	shared_ptr<Employee> employee1_ptr = make_shared<FixedRateWorker>("Ted", "Ramgasamy", 905.00);
 	shared_ptr<Employee> employee2_ptr = make_shared<HourlyWorker>("Louisa", "Mahlungu", 12.00, 52);
