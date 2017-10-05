@@ -66,3 +66,7 @@ int main()
 // The number of points used to plot the graph is too few (ie. the resolution is poor) leading to
 // graphs that are not smooth. This is imporved by increasing the total number of points in the 
 // sampler class.
+
+// Question 3.5:
+// Rendering of Fourier transforms and bode plots
+// Object for x axis, object for y-axis
