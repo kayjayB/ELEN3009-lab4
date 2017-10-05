@@ -4,6 +4,8 @@
 #include "Display.h"
 #include "SolidLineStyle.h"
 #include "Points.h"
+#include "DotLineStyle.h"
+#include "DashedLinestyle.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -30,9 +32,13 @@ int main()
 	Range range{0, 6*PI};
 	SolidLineStyle solid_red{Colour::Red, display};
 	graph.plot(generateDataPoints(sine_function, range), solid_red);
+	
+	DashedLinestyle dashedGreen{Colour::Green, display};
+	graph.plot(generateDataPoints(sine_function, range), dashedGreen);
 
-	SolidLineStyle solid_blue{Colour::Blue, display};
-	graph.plot(generateDataPoints(cosine_function, range), solid_blue);
+	//SolidLineStyle solid_blue{Colour::Blue, display};
+	DotLineStyle dotBlue{Colour::Blue, display};
+	graph.plot(generateDataPoints(cosine_function, range), dotBlue);
 
 	return 0;
 }
