@@ -70,3 +70,7 @@ int main()
 // Question 3.5:
 // Rendering of Fourier transforms and bode plots
 // Object for x axis, object for y-axis
+
+// Question 3.6:
+// The screen is updated each time you render and the display function overwrites everything that 
+// was previously on the screen
