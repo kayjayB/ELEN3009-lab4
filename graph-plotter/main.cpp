@@ -8,6 +8,7 @@
 #include "DashedLinestyle.h"
 #include "Exponential.h"
 #include "Polynomial.h"
+#include "Absolute.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -52,6 +53,12 @@ int main()
 	Range range3{-3,1.5};
 	Polynomial poly{coeff, order};
 	graph.plot(generateDataPoints(poly, range3), dotBlue);
+	
+	std::vector<float> coeff2{1,-3,-4};
+	Range range4{-4,7};
+	std::shared_ptr <Polynomial> poly2= std::make_shared <Polynomial> (coeff2, order);
+	Absolute abs{poly2};
+	graph.plot(generateDataPoints(abs, range4), dotBlue);
 
 	return 0;
 }
