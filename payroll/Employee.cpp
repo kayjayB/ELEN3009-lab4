@@ -30,5 +30,3 @@ void Employee::print() const
 { 
 	cout << _first_name << ' ' << _surname; 
 }
-
-
